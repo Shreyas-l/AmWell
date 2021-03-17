@@ -153,7 +153,11 @@ public class MainActivity extends AppCompatActivity {
                 TimePickerDialog  timePickerDialog = new TimePickerDialog(MainActivity.this, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                        timeEditText.setText(hourOfDay + ":" + minute);
+                        if(minute >=0 && minute <=9) {
+                            timeEditText.setText(hourOfDay + ":0" + minute);
+                        } else {
+                            timeEditText.setText(hourOfDay + ":" + minute);
+                        }
                     }
                 }, hour, minute, true);
 
@@ -239,7 +243,11 @@ public class MainActivity extends AppCompatActivity {
                 TimePickerDialog  timePickerDialog = new TimePickerDialog(MainActivity.this, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                        otherTimeEditText.setText(hourOfDay + ":" + minute);
+                        if(minute >=0 && minute <=9) {
+                            otherTimeEditText.setText(hourOfDay + ":0" + minute);
+                        } else {
+                            otherTimeEditText.setText(hourOfDay + ":" + minute);
+                        }
                     }
                 }, hour, minute, true);
 
@@ -386,7 +394,11 @@ public class MainActivity extends AppCompatActivity {
                 TimePickerDialog  timePickerDialog = new TimePickerDialog(MainActivity.this, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                        updateTime.setText(hourOfDay + ":" + minute);
+                        if(minute >=0 && minute <=9) {
+                            updateTime.setText(hourOfDay + ":0" + minute);
+                        } else {
+                            updateTime.setText(hourOfDay + ":" + minute);
+                        }
                     }
                 }, hour, minute, true);
 
