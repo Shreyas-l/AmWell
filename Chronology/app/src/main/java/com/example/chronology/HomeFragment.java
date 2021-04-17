@@ -45,7 +45,7 @@ public class HomeFragment extends Fragment {
         mAuth=FirebaseAuth.getInstance();
         mUser=mAuth.getCurrentUser();
 
-        databaseReference = FirebaseDatabase.getInstance("https://chronology-88080-default-rtdb.firebaseio.com/").getReference().child("SleepDuration").child(mUser.getUid());
+        databaseReference = FirebaseDatabase.getInstance("https://chronology-88080-default-rtdb.firebaseio.com/").getReference().child(mUser.getUid()).child("SleepDuration");
 
         final SharedPreferences sharedPreferences = getContext().getSharedPreferences("com.example.sleeptracker", MODE_PRIVATE);
 

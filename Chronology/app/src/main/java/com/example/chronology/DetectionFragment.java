@@ -27,6 +27,12 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import com.github.mikephil.charting.components.XAxis;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.okhttp.MediaType;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
@@ -53,6 +59,9 @@ public class DetectionFragment extends Fragment {
     public String selectedImageBase64;
     ProgressDialog pd;
     String prediction;
+    DatabaseReference reference;
+    FirebaseAuth mAuth;
+    FirebaseUser mUser;
 
     private static final int REQUEST_CODE = 4530;
 
@@ -60,6 +69,11 @@ public class DetectionFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.detection_fragment, container, false);
+
+        mAuth=FirebaseAuth.getInstance();
+        mUser=mAuth.getCurrentUser();
+
+        reference= FirebaseDatabase.getInstance("https://chronology-88080-default-rtdb.firebaseio.com/").getReference().child(mUser.getUid()).child("Prediction");
 
         checkButton = view.findViewById(R.id.checkAlzheimers);
         sendImageButton = view.findViewById(R.id.sendImage);
@@ -220,6 +234,18 @@ public class DetectionFragment extends Fragment {
             }
             resultTextView.setText(prediction);
             resultTextView.setVisibility(View.VISIBLE);
+
+            reference.setValue(prediction).addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    if (task.isSuccessful()) {
+                        Log.i("INFO", "Success");
+                    } else {
+                        String error = task.getException().toString();
+                        Toast.makeText(getContext(), "Failed: "+error, Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
 
         }
     }

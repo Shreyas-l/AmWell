@@ -1,14 +1,27 @@
 package com.example.chronology;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.gson.Gson;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 import java.util.Map;
 
 public class ResultActivity extends AppCompatActivity {
@@ -16,10 +29,19 @@ public class ResultActivity extends AppCompatActivity {
     Quiz quiz;
     private int score = 0;
     TextView txtScore, txtAnswer;
+    DatabaseReference reference;
+    FirebaseAuth mAuth;
+    FirebaseUser mUser;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+        mAuth=FirebaseAuth.getInstance();
+        mUser=mAuth.getCurrentUser();
+
+        reference= FirebaseDatabase.getInstance("https://chronology-88080-default-rtdb.firebaseio.com/").getReference().child(mUser.getUid()).child("QuizScore");
+
         txtScore = findViewById(R.id.txtScore);
         txtAnswer = findViewById(R.id.txtAnswer);
         setUpViews();
@@ -43,6 +65,21 @@ public class ResultActivity extends AppCompatActivity {
             }
         }
         txtScore.setText("Your Score : "+score);
+        Calendar calendar = Calendar.getInstance();
+        long wakeUpTimeMillis = calendar.getTimeInMillis();
+        String Date = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
+
+        reference.child(Date).setValue(String.valueOf(score)).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()) {
+                    Log.i("INFO", "Success");
+                } else {
+                    String error = task.getException().toString();
+                    Toast.makeText(ResultActivity.this, "Failed: "+error, Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
     private void setAnswerView() {

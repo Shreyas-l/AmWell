@@ -75,7 +75,7 @@ public class ReminderFragment extends Fragment {
 
         mUser=mAuth.getCurrentUser();
         uID = mUser.getUid();
-        reference= FirebaseDatabase.getInstance("https://chronology-88080-default-rtdb.firebaseio.com/").getReference().child("reminderTasks").child(uID);
+        reference= FirebaseDatabase.getInstance("https://chronology-88080-default-rtdb.firebaseio.com/").getReference().child(uID).child("reminderTasks");
 
         addTaskButton = view.findViewById(R.id.addTaskButton);
         addTaskButton.bringToFront();
