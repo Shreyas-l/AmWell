@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="4">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/medicineEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="4">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/descriptionEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -104,7 +104,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="4">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/timeEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -130,13 +130,13 @@
 
             <Button
                 android:id="@+id/previousButton"
-                android:text="Previous"
+                android:background="@drawable/btn_gradient_style"
                 android:textColor="#fff"
+                android:text="Previous"
                 android:textAllCaps="false"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:layout_margin="10dp"
-                android:background="@color/colorPrimary"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </RelativeLayout>
@@ -148,13 +148,13 @@
 
             <Button
                 android:id="@+id/saveButton"
-                android:text="Save"
+                android:background="@drawable/btn_gradient_style"
                 android:textColor="#fff"
+                android:text="Save"
                 android:textAllCaps="false"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:layout_margin="10dp"
-                android:background="@color/colorPrimary"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </RelativeLayout>

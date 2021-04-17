@@ -18,9 +18,12 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ResultActivity"></activity>
         <activity android:name=".QuestionActivity" />
-        <activity android:name=".IntroActivity" />
+        <activity android:name=".IntroActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".LoginActivity" />
-        <activity android:name=".SlpashActivity">
+        <activity android:name=".SlpashActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

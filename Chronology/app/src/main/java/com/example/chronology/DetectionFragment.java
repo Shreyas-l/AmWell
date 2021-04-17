@@ -209,6 +209,9 @@ public class DetectionFragment extends Fragment {
                         final String key = keys.next();
                         if ((int)values.get(key) == 1) {
                             prediction = key;
+                            resultTextView.setText(prediction);
+                            resultTextView.setVisibility(View.VISIBLE);
+                            System.out.println(prediction);
 //                            runOnUiThread(new Runnable() {
 //                                @Override
 //                                public void run() {
