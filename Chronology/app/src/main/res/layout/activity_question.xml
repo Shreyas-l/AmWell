@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:orientation="vertical"
+    android:background="@color/backgroundColor"
     tools:context=".QuestionActivity">
 
     <com.google.android.material.textview.MaterialTextView
@@ -23,6 +24,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/btn_gradient_style"
+        android:textColor="#fff"
         android:text="Previous"
         android:textAllCaps="false"
         android:visibility="invisible"
@@ -66,6 +69,8 @@
         android:textAllCaps="false"
         android:visibility="invisible"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/btn_gradient_style"
+        android:textColor="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/guideline"
         app:layout_constraintRight_toRightOf="parent" />
@@ -77,6 +82,8 @@
         android:text="Next"
         android:textAllCaps="false"
         android:visibility="invisible"
+        android:background="@drawable/btn_gradient_style"
+        android:textColor="#fff"
         android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/guideline"

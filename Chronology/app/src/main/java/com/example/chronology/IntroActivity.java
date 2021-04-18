@@ -69,9 +69,14 @@ public class IntroActivity extends AppCompatActivity {
         // fill list screen
 
         final List<ScreenItem> mList = new ArrayList<>();
-        mList.add(new ScreenItem("Alzheimer's Brain Gym","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, consectetur  consectetur adipiscing elit",R.drawable.img1));
-        mList.add(new ScreenItem("Medicine Reminder","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, consectetur  consectetur adipiscing elit",R.drawable.img2));
-        mList.add(new ScreenItem("Sleep Trackert","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, consectetur  consectetur adipiscing elit",R.drawable.img3));
+        mList.add(new ScreenItem("Graded MRI Classifier","AI powered classifier for instant graded dementia report generation",R.drawable.detection));
+        mList.add(new ScreenItem("Flashcards Quizzes","Interactive quizzes from general knowledge and sports to history",R.drawable.quiz_test));
+        mList.add(new ScreenItem("Sleep Tracker","Track & Monitor your sleep, get personalised periodic reports",R.drawable.sleep_analysis));
+        mList.add(new ScreenItem("Reminder App","Set tasks, get reminders, enjoy!",R.drawable.reminder));
+        mList.add(new ScreenItem("Connect to doctor","IPeer to peer connection with doctors",R.drawable.doctor));
+        mList.add(new ScreenItem("Community","community builder",R.drawable.community));
+
+
 
         // setup viewpager
         screenPager =findViewById(R.id.screen_viewpager);

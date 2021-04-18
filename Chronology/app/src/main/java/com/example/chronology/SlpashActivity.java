@@ -29,10 +29,10 @@ public class SlpashActivity extends AppCompatActivity {
         bottom_text_anim = AnimationUtils.loadAnimation(this, R.anim.bottom_text_anim);
 
         logoImg = findViewById(R.id.tifrSplashLogo);
-        bottom_text = findViewById(R.id.tifrSplashText);
+//        bottom_text = findViewById(R.id.tifrSplashText);
 
         logoImg.setAnimation(top_logo_Anim);
-        bottom_text.setAnimation(bottom_text_anim);
+//        bottom_text.setAnimation(bottom_text_anim);
 
         new Handler().postDelayed(new Runnable() {
             @Override

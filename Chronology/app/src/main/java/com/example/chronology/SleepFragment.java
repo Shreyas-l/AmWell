@@ -147,7 +147,14 @@ public class SleepFragment extends Fragment {
                             avgSleep += Float.parseFloat(time.getString(String.valueOf(i)));
                         }
                         avgSleep = avgSleep / time.length();
+                        String message = "";
+                        if(avgSleep < 7) {
+                            message += "You need to sleep more.";
+                        } else {
+                            message += "Your sleep level is optimal";
+                        }
                         avgSleepText = "Average Sleep Duration in Hours: " + String.valueOf(avgSleep) + "Hours";
+                        avgSleepText += "\n"+message;
 
                         Log.i("XAxis", labels.toString());
                         Log.i("YAxis", entries.toString());
@@ -159,8 +166,8 @@ public class SleepFragment extends Fragment {
                         lineDataSet.setDrawCircleHole(false);
                         lineDataSet.setValueTextSize(11f);
                         lineDataSet.setDrawCubic(true);
-                        lineDataSet.setCircleColor(Color.rgb(98,0,238));
-                        lineDataSet.setColor(Color.rgb(98,0,238));
+                        lineDataSet.setCircleColor(Color.rgb(1,55,140));
+                        lineDataSet.setColor(Color.rgb(1,55,140));
 
                         if (Utils.getSDKInt() >= 18) {
                             Drawable drawable = ContextCompat.getDrawable(getContext(), R.drawable.fade_blue);
@@ -219,6 +226,7 @@ public class SleepFragment extends Fragment {
 
                 lineChart.animateY(2000);
                 lineChart.invalidate();
+
 
                 textView.setText(avgSleepText);
                 Log.i("FINISH", "FINISH");

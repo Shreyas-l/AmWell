@@ -6,11 +6,12 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_baseline_home_24"
-            android:title="Home" />
+            android:title="Home"
+            />
 
         <item
             android:id="@+id/nav_detection"
-            android:icon="@drawable/ic_timer"
+            android:icon="@drawable/ic_detection"
             android:title="Detection" />
 
         <item
@@ -27,6 +28,11 @@
             android:id="@+id/nav_sleep"
             android:icon="@drawable/ic_sleep"
             android:title="Sleep Monitor" />
+
+        <item
+            android:id="@+id/nav_report"
+            android:icon="@drawable/ic_report"
+            android:title="Report"/>
 
         <item
             android:id="@+id/nav_logout"
