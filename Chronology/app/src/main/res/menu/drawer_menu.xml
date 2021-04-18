@@ -35,6 +35,26 @@
             android:title="Report"/>
 
         <item
+            android:id="@+id/nav_yoga"
+            android:icon="@drawable/ic_yoga"
+            android:title="Yoga"/>
+
+        <item
+            android:id="@+id/nav_doctor"
+            android:icon="@drawable/ic_doctor"
+            android:title="Konnect"/>
+
+        <item
+            android:id="@+id/nav_fall"
+            android:icon="@drawable/ic_fall"
+            android:title="Fall Detection"/>
+
+        <item
+            android:id="@+id/nav_community"
+            android:icon="@drawable/ic_community"
+            android:title="Community"/>
+
+        <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/ic_logout"
             android:title="Logout"/>
