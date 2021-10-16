@@ -3,14 +3,14 @@
   <br>
   <a href="http://www.amitmerchant.com/electron-markdownify"><img src="https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.png" alt="Markdownify" width="200"></a>
   <br>
-  Markdownify
+  AmWell
   <br>
 </h1>
 
-<h4 align="center">A minimal Markdown Editor desktop app built on top of <a href="http://electron.atom.io" target="_blank">Electron</a>.</h4>
+<h3 align="center">TechStack</h3>
 
 <p align="center">
-  <a href="https://badge.fury.io/js/electron-markdownify">
+ <!--  <a href="https://badge.fury.io/js/electron-markdownify">
     <img src="https://badge.fury.io/js/electron-markdownify.svg"
          alt="Gitter">
   </a>
@@ -20,7 +20,8 @@
   </a>
   <a href="https://www.paypal.me/AmitMerchant">
     <img src="https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat">
-  </a>
+  </a> -->
+  <div align="center"><img width="55" src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/angular-icon.svg"/><img width="55" src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/bootstrap.svg"/><img width="55" src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/eslint.svg"/><img width="55" src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/jasmine.svg"/><img width="55" src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/javascript.svg"/><img width="55" src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/karma.svg"/><img width="55" src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/protactor.svg"/><img width="55" src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/typescript-icon.svg"/></div>
 </p>
 
 <p align="center">
