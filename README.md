@@ -35,25 +35,22 @@
 
 ![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif)
 
+## Description
+
+<p> Alzheimer's disease is an irreversible, progressive brain disorder that slowly destroys memory and thinking skills and, eventually, the ability to carry out the simplest tasks. The symptoms mainly first appear in their mid-60s.
+
+We have built an app that aids the elderly in the following tasks.
+</p>
+
 ## Key Features
 
-* LivePreview - Make changes, See changes
-  - Instantly see what your Markdown documents look like in HTML as you create them.
-* Sync Scrolling
-  - While you type, LivePreview will automatically scroll to the current location you're editing.
-* GitHub Flavored Markdown  
-* Syntax highlighting
-* [KaTeX](https://khan.github.io/KaTeX/) Support
-* Dark/Light mode
-* Toolbar for basic Markdown formatting
-* Supports multiple cursors
-* Save the Markdown preview as PDF
-* Emoji support in preview :tada:
-* App will keep alive in tray for quick usage
-* Full screen mode
-  - Write distraction free.
-* Cross platform
-  - Windows, macOS and Linux ready.
+* Graded MRI Classifier: AI powered classifier for instant graded dementia report generation
+* Flashcards Quizzes: Interactive quizzes from general knowledge and sports to history
+* Sleep Tracker: Track & Monitor your sleep, get personalised periodic reports
+* Reminder App: Set tasks, get reminders, enjoy!
+* Fall Detector: Alert when the host falls
+* Konnect 2 Doctor: Peer to peer connection with doctors 
+* Community: Community builder
 
 ## How To Use
 
