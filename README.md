@@ -36,7 +36,9 @@ We have built an app that aids the elderly in the following tasks.
 </p>
 
 ## Key Features
+
 <p id="key-features" ></p>
+
 * Graded MRI Classifier: AI powered classifier for instant graded dementia report generation
 * Flashcards Quizzes: Interactive quizzes from general knowledge and sports to history
 * Sleep Tracker: Track & Monitor your sleep, get personalised periodic reports
